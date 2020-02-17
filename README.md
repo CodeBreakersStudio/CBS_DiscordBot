@@ -1,7 +1,7 @@
 # CBS_DiscordBot
 (Code Breakers Studio Discord Bot)
 
-CBS_DiscordBotis a Python base discord bot build on [discord](https://discordpy.readthedocs.io) library
+CBS_DiscordBot is a Python base discord bot build on [discord](https://discordpy.readthedocs.io) library
 
 ## Installation
 
@@ -15,15 +15,39 @@ Use button **Clone or download** to download .zip file or clone git repository
 >### .zip way:
 >Extract .zip to place where you need it
 
+#### Second step:
+>Enter the CBS_DiscordBot project run cmd or bash in this directory and use this command:
+>```bash
+>python -m pip install -e .
+>```
+>that will install this library
+
 ### Requirments
-Install [python](https://www.python.org/downloads/) 3.7+ and when you install check checkbox to add python to your Path
+>Install [python](https://www.python.org/downloads/) 3.7+ and when you install check checkbox to add python to your Path
 
 ---
 ## Usage
-```bash
-cd path/to/main/module/directory/CBS_DiscordBot
-python run.py
-```
+### Simple:
+Enter to this directory ```CBS_DiscordBot```
+
+You find example bot config file under ```./example/conf```
+
+In conf you need to insert your bot token/tokens from [Discord](https://discordapp.com/developers/applications/)
+
+#### run:
+windows:
+>```bash
+>run.bat
+>```
+linux:
+>```bash
+>run.sh
+>```
+
+### Advenced:
+>```python
+>import cbs_db as discord_bot
+>```
 
 ---
 ## Project structure
@@ -32,13 +56,27 @@ CBS_DiscordBot
 | README.md
 | .gitignore
 | LICENCSE
-| setup.py
-| run.py
-| src
-| | cogs
-| | | musicbot.py
-| | cfg
-| | | config.py
+| setup.py                <- module setup
+| run.py                  <- run file in python
+| run.bat                 <- run file for windows
+| run.sh                  <- run file for linux
+|-example
+| | bot.py                <-example bot
+| | conf                  <- configuration file of example bot
+|-cbs_db                  <- src folder
+| | __init__.py           <- main bot instance
+| | config.py             <- pure config 
+| |-bot_class
+| | | __init__.py         <- bot builder class for new istances
+| |-cogs                  <- cogs
+| | |-musicbot
+| | | | __init__.py       <- musicbot main cog
+| | |-util
+| | | | __init__.py       <- utilities
+| | | ...                 <- other cogs in future
+|-test                    <- unit test folder
+|-build
+|-dist
 ```
 
 ---
