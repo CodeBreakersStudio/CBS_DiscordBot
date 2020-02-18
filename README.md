@@ -9,7 +9,7 @@ CBS_DiscordBot is a Python base discord bot build on [discord](https://discordpy
 ```bash
 pip install git+https://github.com/CodeBreakersStudio/CBS_DiscordBot.git
 ```
-
+### Alternative way
 Use button **Clone or download** to download .zip file or clone git repository
 
 >### Clone command
